@@ -55,9 +55,13 @@ def admin():
 
 # Create a function named greet_admin which redirect the request to the hello path with param of 'Master Admin!!!!'
 # and assign to the route of ('/greet-admin')
-@app.route('/greet-admin')
-def greet_admin():
-    return redirect(url_for('greet', name='Master Admin!!!'))
+# @app.route('/greet-admin')
+# def greet_admin():
+#     return redirect(url_for('greet', name='Master Admin!!!'))
+
+@app.route('/greet')
+def great():
+    return render_template('greet.html', name='Master Admin!!!')
 
 # Rewrite a function named greet which which uses template file named `greet.html` under `templates` folder
 # and assign to the dynamic route of ('/<name>')
